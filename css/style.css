@@ -1,0 +1,514 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #102746;
+}
+/* header styles start*/
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.wrapper-full {
+    max-width: 1262px;
+    margin: 0 auto;
+}
+.section-title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.section-title::after {
+    display: block;
+    content: '';
+    width: 253px;
+    height: 3px;
+    background-color: #006DFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__wrapper {
+    display: flex;
+    padding-top: 56px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.header__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header__item {
+    margin-right: 82px;
+}
+.header__item:last-child {
+    margin-right: 0;
+}
+.header__link {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+.header__link:hover, .header__link:focus, .header__link:active {
+    opacity: .75;
+}
+/* header styles end*/
+
+/* intro styles start*/
+
+.intro {
+    min-height: 100vh;
+    background: url(../img/Hero.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+    padding-bottom: 367px;
+}
+.intro__title {
+    color: #FFF;
+    font-size: 50px;
+    line-height: 60px;
+    max-width: 619px;
+    margin-bottom: 22px;
+}
+.intro__subtitle {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 546px;
+    margin-bottom: 59px;
+}
+.search-form__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-form__field {
+    width: 297px;
+    background: url(../img/svg/oval.svg) no-repeat left 7px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFF;
+}
+.search-form__field::placeholder {
+    color: #FFF;
+}
+.search-form__submit {
+    padding: 15px 39px;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #FFF;
+    background: #1B7DFF;
+}
+.search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active {
+    background: #0e66da;
+}
+
+/* intro styles end*/
+
+/* benefist styles start */
+.benefits {
+    margin-bottom: 131px;
+}
+.benefits__wrap {
+    max-width: 1262px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
+    position: relative;
+}
+
+.benefits__title {
+    width: 100%;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 42px;
+    line-height: normal;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background: #FFF;
+}
+
+.benefits__cards {
+    display: grid;   
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+    padding: 0 100px;
+}
+.benefits__card {
+    grid-column: span 1;
+    margin-bottom: 112px;
+}
+.benefits__card-pic {
+    min-width: 66px;
+    margin-bottom: 37px;
+}
+.benefits__card-thumb {
+    display: block;
+}
+.benefits__card-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 26px;
+}
+.benefits__card-desc {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 39px;
+}
+.benefits__card-more {
+    display: inline-block;
+    padding-right: 59px;
+    background: url(/img/svg/arrow.svg) no-repeat 95% center;
+    color: #006DFE;
+    font-size: 16px;
+    line-height: 24px;
+    transition: .2s all;
+}
+.benefits__card-more:hover, .benefits__card-more:focus {
+    background: url(/img/svg/arrow.svg) no-repeat right center;
+}
+
+/* benefist styles end */
+
+/* places styles start */
+.places {
+    margin-bottom: 131px;
+}
+.places__caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+.places__title {
+    margin-right: 15px;
+}
+.places__view-all {
+    font-size: 16px;
+    color: #006DFE;
+    background: url(/img/svg/arrow.svg) no-repeat right center;
+    padding-right: 59px;
+    transition: .2s all;
+
+}
+.places__view-all:hover, .places__view-all:focus {
+    opacity: 0.65;
+}
+.places__cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+.places__card {
+    position: relative;
+    overflow: hidden;
+}
+.places__card:hover .places__card-pic {
+    transform: scale(1.05);
+}
+.places__card::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.places__card-title {
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+}
+.places__card_size_lg {
+    grid-column: span 3;
+}
+.places__card-pic {
+    width: 100%;
+    transition: 0.15s;
+}
+.places__card-pic_size_lg {
+    height: 354px;
+    object-fit: cover;
+}
+.places__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.places__card_size_sm {
+    grid-column: span 2;
+}
+.places__card-pic_size_sm {
+    height: 283px;
+    object-fit: cover;
+}
+/* places styles end */
+
+/* tours sryles start */
+
+.tours {
+    margin-bottom: 139px;
+}
+
+.tours__tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+.tour__info {
+    padding-left: 47px;
+}
+.tour__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 85px;
+}
+.tour__desc{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+.tour__link {
+    display: inline-block;
+    padding-right: 59px;
+    background: url(/img/svg/arrow.svg) no-repeat 95% center;
+    color: #006DFE;
+    font-size: 16px;
+    line-height: 24px;
+}
+.tour__link:hover, .tour__link:focus {
+    opacity: 0.65;
+}
+/* tours sryles end */
+.top {
+    margin-bottom: 86px;
+}
+.top__title {
+    margin-bottom: 54px;
+}
+.top__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 57px;
+}
+.top__card-pic {
+    position: relative;
+    margin-bottom: 45px;
+}
+.top__card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    justify-content: flex-end;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+.top__card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFF;
+    margin: 0 auto 0 0;
+}
+.top__card-likes {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+    padding-right: 20px;
+    background: url(../img/svg/heart-icon.png) no-repeat right;
+    margin-right: 14px;
+}
+.top__card-comments {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+    padding-right: 23px;
+    background: url(../img/svg/comment-icon.png) no-repeat right;
+}
+.top__card-desc {
+    color: #102746;
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+    margin-bottom: 31px;
+}
+.top__card-more {
+    width: 118px;
+    height: 42px;
+    padding: 12px 19px;
+    background: #006DFE;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+.top__card-more:hover, .top__card-more:focus, .top__card-more:active {
+    background: #0e66da;
+}
